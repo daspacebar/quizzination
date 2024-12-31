@@ -92,12 +92,37 @@ function startTimer() {
 
 function displayResults() {
     const dataDisplay = document.getElementById("dataDisplay");
-    dataDisplay.innerHTML = `Quiz Completed! Your Score: ${score}/${questions.length}`;
+    dataDisplay.innerHTML = "";
+
+    const welcomeText = document.querySelector("h1");
+    if (welcomeText) {
+        welcomeText.style.display = "none";
+    }
+
+    const quizCompletedText = document.createElement("p");
+    quizCompletedText.textContent = "Quiz Completed!";
+    quizCompletedText.classList.add("quiz-completed");
+    dataDisplay.appendChild(quizCompletedText);
+
+    const scoreText = document.createElement("p");
+    scoreText.textContent = `Your Score: ${score}/${questions.length}`;
+    scoreText.classList.add("score-text");
+    dataDisplay.appendChild(scoreText);
+
+    const videoElement = document.createElement("video");
+    videoElement.src = "assets/video.mp4";
+    videoElement.autoplay = true;
+    videoElement.controls = false;
+    videoElement.loop = true;
+    videoElement.muted = false;
+    videoElement.classList.add("quiz-video");
+    dataDisplay.appendChild(videoElement);
+
     const restartButton = document.createElement("button");
     restartButton.textContent = "Restart Quiz";
     restartButton.className = 'quiz-restart-button';
     restartButton.addEventListener("click", () => {
-        startButton.style.display = 'block'; // Show start button again on restart
+        startButton.style.display = 'block';
         fetchJson();
     });
     dataDisplay.appendChild(restartButton);
