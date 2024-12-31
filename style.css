@@ -137,3 +137,14 @@ h1 {
     margin-right: auto;
 }
 
+
+
+@media only screen and (max-width: 600px) {
+    .container {
+      width: 280px;
+    }
+    .quiz-video{
+        width: 100%;
+        max-width: 600px;
+    }
+  }

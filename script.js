@@ -28,6 +28,10 @@ function randomizeOptions() {
 }
 
 function displayQuestion(index) {
+    const welcomeText = document.querySelector("h1");
+    if (welcomeText) {
+        welcomeText.style.display = "none";
+    }
     const dataDisplay = document.getElementById("dataDisplay");
     dataDisplay.innerHTML = ""; // Clear previous question
 
