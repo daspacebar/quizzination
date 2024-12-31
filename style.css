@@ -1,0 +1,118 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #4f6d7a, #c0d6df);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Quiz Container */
+.container {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    overflow: hidden;
+}
+
+#dataDisplay{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Quiz Title */
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Start Button */
+#start-quiz-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: #4CAF50;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#start-quiz-button:hover {
+    background: #388E3C;
+}
+
+/* Question Styling */
+.quiz-question {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #444;
+}
+
+/* Options Styling */
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.quiz-option {
+    padding: 10px;
+    font-size: 14px;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.quiz-option:hover {
+    background: #e0e0e0;
+    transform: scale(1.05);
+}
+
+/* Correct & Incorrect Answers */
+.quiz-option.correct {
+    background: #4CAF50;
+    color: white;
+}
+
+.quiz-option.incorrect {
+    background: #F44336;
+    color: white;
+}
+
+/* Timer Styling */
+.quiz-timer {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #d9534f;
+}
+
+/* Restart Button */
+.quiz-restart-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background: #2196F3;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.quiz-restart-button:hover {
+    background: #1976D2;
+}
